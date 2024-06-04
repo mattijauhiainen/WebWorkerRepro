@@ -1,4 +1,5 @@
 import { invoke } from "@tauri-apps/api/tauri";
+// import { resolveResource } from "@tauri-apps/api/path";
 
 let greetInputEl: HTMLInputElement | null;
 let greetMsgEl: HTMLElement | null;
@@ -20,3 +21,11 @@ window.addEventListener("DOMContentLoaded", () => {
     greet();
   });
 });
+
+(async () => {
+  console.log("Loading worker");
+  // const path = await resolveResource("src/worker.ts");
+  // new Worker(path, { type: "module" });
+  new Worker("src/worker.ts", { type: "module" });
+  console.log("Loaded worker");
+})();
