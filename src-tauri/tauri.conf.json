@@ -43,6 +43,7 @@
         "icons/icon.ico"
       ],
       "resources": [
+        "../src/worker.js",
         "../src/worker.ts"
       ]
     }

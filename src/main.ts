@@ -26,6 +26,6 @@ window.addEventListener("DOMContentLoaded", () => {
   console.log("Loading worker");
   // const path = await resolveResource("src/worker.ts");
   // new Worker(path, { type: "module" });
-  new Worker("src/worker.ts", { type: "module" });
+  new Worker("src/worker.js", { type: "module" });
   console.log("Loaded worker");
 })();
